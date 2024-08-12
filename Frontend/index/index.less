@@ -1,0 +1,249 @@
+// 声明变量
+
+// 1. 首页背景图片地址、首页字体颜色
+@bgImgURL: url(/images/bg/img2.jpg);
+@fontColor: #ffffff;
+
+// 2. 导航栏的背景颜色、字体颜色、下划线的颜色、文字的字体样式、光标地址
+@tarBgColor: rgba(255, 255, 255, 0.1);
+@barFontColor: #ffffff;
+@barFontColorChagne: #48d0f6;
+@barUnderline: #e0ffff;
+@barFontFamily: STXingkai, SimHei, SimSun;
+@barFloatCursor: url(/images/cursor/unavailable.cur);
+
+// 3. 头像地址、头像边框线颜色、文本的字体样式
+@avatar: url(/images/avatar/smile.jpg);
+@borderColor: #DCE2F1;
+@textFontFamily: STXingkai, SimHei, SimSun;
+
+// 4. 头像旋转动画
+@keyframes changeSize {
+  0% {
+    width: 24vw;
+    height: 24vw;
+    transform: rotateZ(0deg);
+  }
+
+  50% {
+    width: 12vw;
+    height: 12vw;
+    transform: rotateZ(-360deg);
+  }
+
+  100% {
+    width: 24vw;
+    height: 24vw;
+    transform: rotateZ(0deg);
+  }
+}
+
+// 5. 底部盒子颜色、盒子字体样式
+@bottomBoxColor: rgba(23, 67, 71, 0.37);
+@bottomBoxFontFamily: STHupo, STXingkai, SimHei, SimSun;
+
+// 背景图
+body {
+  // 1. 使用背景图
+  background-image: @bgImgURL;
+
+  // 2. 让图片不重复
+  background-repeat: no-repeat;
+
+  // 3. 固定图片，让它无法随页面滚动而滚动
+  background-attachment: fixed;
+
+  // 4. 让图片在水平方向上居中
+  background-position: center 0;
+
+  // 5. 让图片基于容器大小进行伸缩
+  background-size: cover;
+}
+
+// 首页字体颜色
+body {
+  color: @fontColor;
+}
+
+// 内容整体布局
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+// 顶部区域
+.top {
+  // 顶部区域的高度：5vw = 屏幕宽度的 5%
+  height: 5vw;
+  width: 100vw;
+  background-color: @tarBgColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  // 导航栏内容
+  .navigation ul {
+    width: 86vw;
+    height: 2.4vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    li {
+      width: 6.4vw;
+      line-height: 2.4vw;
+      font-size: 1.3vw;
+      font-family: @barFontFamily;
+
+      a {
+        color: @barFontColor;
+      }
+    }
+
+    // 鼠标悬浮在导航文字时的样式
+    a:hover {
+      font-size: 1.4vw;
+      font-weight: 700;
+      color: @barFontColorChagne;
+      border-bottom: 0.1vw solid @barUnderline;
+      padding-bottom: 0.2vw;
+      cursor: @barFloatCursor, auto;
+      transition: all 0.38s;
+    }
+  }
+}
+
+// 隐藏与显示导航栏
+.top {
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  transition: all 2.2s;
+}
+
+.top:hover {
+  opacity: 1;
+  transition: all 2.2s;
+}
+
+// 中间区域
+.center {
+  // 中间区域的高度：38vw = 屏幕宽度的 38%
+  height: 48vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  // 左右文本
+  .left,
+  .right {
+    width: 32vw;
+    height: 12vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    perspective: 20vw;
+
+    .text {
+      font-size: 2vw;
+      font-family: @textFontFamily;
+    }
+
+    .text:hover {
+      font-size: 3vw;
+      color: red;
+      transition: all 2s;
+    }
+  }
+
+  // 头像
+  .avatar {
+    width: 26vw;
+    height: 26vw;
+    border-radius: 50%;
+    background-image: @avatar;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid @borderColor;
+    box-shadow: 2vw 2vw 10vw @borderColor;
+  }
+
+  .avatar:hover {
+    animation: changeSize 4s;
+  }
+}
+
+// 底部区域
+.bottom {
+  padding: 2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  width: 56vw;
+  border-top: 0.3vw solid pink;
+  padding: 2vw 3vw 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  // 底部盒子
+  .box {
+    width: 12vw;
+    height: 12vw;
+    margin: 1.8vw;
+    background-color: @bottomBoxColor;
+    border-radius: 1vw;
+    font-size: 2vw;
+    text-align: center;
+    line-height: 12vw;
+    font-family: @bottomBoxFontFamily;
+    display: inline-block;
+    transform: rotateZ('90deg');
+  }
+
+  // 盒子被选中时
+  .box:hover {
+    width: 12.6vw;
+    height: 12.6vw;
+    font-size: 2.2vw;
+    color: rgba(203, 100, 193, 0.9);
+    box-shadow: 0.1vw 0.1vw 20vw rgba(140, 35, 193, 0.9);
+    transition: all 0.8s;
+  }
+}
+
+// 悬浮按钮
+.floating {
+  width: 2.6vw;
+  height: 2.6vw;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  text-align: center;
+  line-height: 2.8vw;
+}
+
+.btnTop {
+  top: 1.2vw;
+  right: 2.8vw;
+  z-index: 1;
+}
+
+.btnBottom {
+  bottom: 1.2vw;
+  right: 2.8vw;
+}
+
+// 隐藏功能
+.hide {
+  display: none;
+}

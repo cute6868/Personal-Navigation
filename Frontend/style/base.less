@@ -1,0 +1,43 @@
+// 声明变量
+
+// 1. 网站的背景色
+@bgColor: #eaeaef;
+
+// 2. 网站的字体颜色
+@fontColor: #000000;
+
+// 3. 网站的游标URL
+@myCursor: url(/images/cursor/alternate.cur);
+
+// 清除默认样式
+
+// 1. 清除所有内外边距、开启盒子尺寸内敛、设置网站的鼠标样式
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: @myCursor, pointer;
+}
+
+// 2. 清除<li>的默认符号
+li {
+  list-style: none;
+}
+
+// 3. 清除<a>的下划线
+a {
+  text-decoration: none;
+}
+
+// 设置网站相关的配置
+
+body {
+  // 1. 设置网站的背景色
+  background-color: @bgColor;
+  color: @fontColor;
+
+  // 2. 设置网站的字体颜色
+  a {
+    color: @fontColor;
+  }
+}

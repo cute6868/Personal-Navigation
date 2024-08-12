@@ -1,0 +1,52 @@
+.paper {
+  width: 66.8vw;
+  border-radius: 0.4vw;
+  margin: 1vw auto;
+  padding: 2vw;
+  background-color: #FFFFFF;
+}
+.paper .top {
+  text-align: center;
+}
+.paper .top h2 {
+  font-size: 2.4vw;
+  margin-bottom: 1vw;
+  padding: 1vw;
+  color: #000000;
+}
+.paper .top .time {
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.6);
+  border-top: 0.2vw solid rgba(216, 175, 78, 0.8);
+  padding: 1vw 0;
+}
+.paper .center {
+  width: 96%;
+  margin: 1vw auto;
+  padding: 0.8vw;
+  border-radius: 0.1vw;
+  box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.06);
+}
+.paper .bottom {
+  width: 96%;
+  margin: 1.6vw auto 0;
+  padding: 0.8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.06);
+}
+.paper .bottom .avatar {
+  width: 3.6vw;
+  height: 3.6vw;
+  border-radius: 50%;
+  margin: 0.4vw 0 0.2vw;
+  background-image: url(/images/avatar/myAvatar.jpg);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+}
+.paper .bottom .author {
+  font-size: 1.1vw;
+}

@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url(/images/cursor/alternate.cur), pointer;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-color: #eaeaef;
+  color: #000000;
+}
+body a {
+  color: #000000;
+}

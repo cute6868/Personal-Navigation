@@ -1,0 +1,121 @@
+.page {
+  width: 68%;
+  margin: 2vw auto;
+  border-radius: 0.2vw;
+  box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.2vw;
+}
+.page > .top {
+  width: 100%;
+  border-radius: 1.2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1vw;
+}
+.page > .top .pic {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page > .top .pic .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 1vw 2.8vw;
+  background-image: url(/images/avatar/myAvatar.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.page > .top .pic div > hr {
+  width: 23vw;
+  height: 0.14vw;
+  border: 0;
+}
+.page > .top .pic #left-line {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
+}
+.page > .top .pic #right-line {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
+}
+.page > .top .author {
+  font-size: 1.2vw;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 1.8vw;
+}
+.page > .top .number {
+  font-size: 1.8vw;
+  font-weight: 700;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.page > .center {
+  width: 100%;
+}
+.page > .center ul {
+  padding: 1vw 2.4vw;
+}
+.page > .center ul > li {
+  width: 99.4%;
+  height: 8vw;
+  margin: 1vw 0;
+  border-radius: 0.4vw;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vw;
+}
+.page > .center ul > li .left {
+  width: 72%;
+}
+.page > .center ul > li .right {
+  width: 26%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.page > .center ul > li a {
+  font-size: 1.4vw;
+}
+.page > .center ul > li .right > button {
+  font-size: 1vw;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 0.3vw 0.8vw;
+  border-radius: 0.6vw;
+}
+.page > .center ul > li .right > button:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.page > .center ul > li:hover {
+  width: 100%;
+  height: 8.4vw;
+  transition: all 1s;
+}
+.page > .bottom {
+  width: 100%;
+  border-radius: 1.2vw;
+  margin: 1.2vw 0;
+}
+.page > .bottom ul {
+  display: flex;
+  justify-content: center;
+}
+.page > .bottom ul li {
+  margin: 0 0.5vw;
+  padding: 0.3vw 0.6vw;
+  border-radius: 0.2vw;
+  border: 0.12vw solid rgba(0, 0, 0, 0.4);
+  font-size: 1vw;
+  text-align: center;
+}
+.page > .bottom ul li:hover {
+  color: #b94343;
+  transition: all 0.4s;
+  border-color: #b94343;
+}

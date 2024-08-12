@@ -1,0 +1,73 @@
+// 控制框架的外部样式
+.info {
+  width: 30vw;
+  height: 36vw;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1vw;
+  box-shadow: 0.4vw 0.2vw 2vw rgba(70, 46, 207, 0.413);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 控制框架的内部样式
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .top {
+    width: 24vw;
+    height: 6vw;
+    // border: 1px solid black;
+    // border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    font-family: FZYaoti, STHupo, STXinwei, SimSun;
+  }
+
+  .bottom {
+    width: 22vw;
+    height: 22vw;
+    // border: 0.2vw solid rgba(38, 10, 10, 0.751);
+    border-radius: 1vw;
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        width: 20vw;
+        height: 3vw;
+        // background-color: pink;
+        margin-bottom: 2vw;
+        font-size: 1.4vw;
+        font-family: SimSun;
+
+        label {
+          display: inline-block;
+          vertical-align: text-top;
+        }
+
+        input {
+          width: 16vw;
+          height: 2.2vw;
+          border-radius: 0.4vw;
+        }
+      }
+    }
+  }
+}
